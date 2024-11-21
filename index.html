@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="aos-master/dist/aos.css">
+    <link rel="stylesheet" href="fontawesome/fontawesome-free-6.6.0-web/css/fontawesome.css">
+    <link rel="stylesheet" href="fontawesome/fontawesome-free-6.6.0-web/css/brands.css">
+    <link rel="stylesheet" href="fontawesome/fontawesome-free-6.6.0-web/css/solid.css">
+</head>
+    <style>
+    .glow-on-hover {
+          transition: box-shadow 0.3s ease-in-out;
+        }
+        .glow-on-hover:hover {
+          
+          box-shadow: 0 0 20px 10px rgba(0, 0, 255, 0.7);
+
+        }
+        .project-container {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+  }
+  .typing {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 2rem;
+      display: inline-block;
+      border-right: 3px solid black; 
+      width: 0;
+      animation: typing 4s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
+    }
+
+  .project-item {
+    text-align: center;
+  }
+
+  
+    </style>
+<body style="background-color: #020202;">
+   
+    <script src="aos-master/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        AOS.init();
+      </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+      <div class="sticky-top bg-dark">
+
+        <nav class="navbar navbar-expand-sm navbar-dark sticky-top" id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="umbrella.jpg" alt="" class="rounded-circle" height="40px" width="40px">
+                    <h4 class="ms-2 mb-0">IT</h4>     
+                </a>
+                <div class="btn-group btn-group-lg">
+                    <button type="button" class="btn btn-dark dropdown-toggle fa-solid fa-house"  style="font-size: 15px;" data-bs-toggle="dropdown">Home</button>
+                    <ul class="dropdown-menu bg-dark">
+                        <li><button onclick="scrollTohome()" type="button" class="btn btn-dark">Home</button></li>
+                        <li><button onclick="scrollToAbout()" type="button" class="btn btn-dark">About</button></li>
+                        <li><button onclick="scrollToskill()" type="button" class="btn btn-dark">Softskill</button></li>
+                        <li><button onclick="scrollToProjects()" type="button" class="btn btn-dark">Project</button></li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-dark fa-solid fa-phone " style="font-size: 15px;">Contact</a>
+                </div>
+                </div>
+            </div>
+        </nav>
+
+        <script>
+
+          window.onload = function() {
+            gsap.from("#navbar", {
+              y: -100,            
+              opacity: 0,         
+              duration: 2,        
+              ease: "bounce.out", 
+            });
+          }
+        </script>
+        
+        </div>
+    
+
+    <div class="text-center text-light" id="home" style="margin-top: 150px;" >
+             <img src="umbrella.jpg"  class="rounded-circle mx-auto d-block" data-aos="flip-left" style="width: 200px; height: 200px;">
+            <h1 >Irfan Trianda</h1>
+            <h4 style="margin-bottom: 150px ;"  >Mahasiswa Informatika</h4>
+         </div>
+
+
+<div class="wave-container bg-white"id="about" >
+
+ <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1440 320"><path fill="1A1A1D" fill-opacity="1" d="M0,96L13.3,117.3C26.7,139,53,181,80,213.3C106.7,245,133,267,160,240C186.7,213,213,139,240,122.7C266.7,107,293,149,320,165.3C346.7,181,373,171,400,165.3C426.7,160,453,160,480,144C506.7,128,533,96,560,80C586.7,64,613,64,640,74.7C666.7,85,693,107,720,133.3C746.7,160,773,192,800,224C826.7,256,853,288,880,266.7C906.7,245,933,171,960,149.3C986.7,128,1013,160,1040,165.3C1066.7,171,1093,149,1120,122.7C1146.7,96,1173,64,1200,74.7C1226.7,85,1253,139,1280,160C1306.7,181,1333,171,1360,170.7C1386.7,171,1413,181,1427,186.7L1440,192L1440,0L1426.7,0C1413.3,0,1387,0,1360,0C1333.3,0,1307,0,1280,0C1253.3,0,1227,0,1200,0C1173.3,0,1147,0,1120,0C1093.3,0,1067,0,1040,0C1013.3,0,987,0,960,0C933.3,0,907,0,880,0C853.3,0,827,0,800,0C773.3,0,747,0,720,0C693.3,0,667,0,640,0C613.3,0,587,0,560,0C533.3,0,507,0,480,0C453.3,0,427,0,400,0C373.3,0,347,0,320,0C293.3,0,267,0,240,0C213.3,0,187,0,160,0C133.3,0,107,0,80,0C53.3,0,27,0,13,0L0,0Z"></path></svg>
+ <div class="text-center" >
+     <h1 data-aos="flip-left" >about</h1>     
+     <div data-aos="fade-right">
+         <p >Halo, saya Irfan Trianda, seorang mahasiswa Informatika di universitas andalas </p>
+         <p>yang memiliki minat mendalam dalam desain antarmuka pengguna (UI) dan pengalaman pengguna (UX).</p>
+         <p>Saya percaya bahwa desain yang baik mampu menciptakan dampak positif bagi kehidupan pengguna. </p>
+        </div>
+    </div>
+      
+      <div class="container mt-5">
+        <h2 class="text-center" style="margin-top: 200px;" data-aos="flip-left" id="skill">soft skill</h2>
+        <div class="project-container">
+          <div class="project-item" data-aos="fade-right">
+         
+            <img src="html.png" alt="Logo Laundry" class="img-fluid glow-on-hover" height="200px" width="200px">
+          </div>
+          <div class="project-item" data-aos="fade-left">
+           
+            <img src="css.png" alt="Logo PWA" class="img-fluid glow-on-hover" style="margin-left: 50px; margin-right: 50px;" height="200px" width="200px">
+          </div>
+          <div class="project-item" data-aos="fade-right">
+
+            <img src="js.png" alt="Logo Laundry" class="img-fluid glow-on-hover" height="200px" width="200px">
+          </div>
+        </div>
+        <div class="project-container" style="margin-top: 50px;">
+            <div class="project-item" data-aos="fade-right">
+           
+              <img src="rejs2.png" alt="Logo Laundry" class="img-fluid glow-on-hover" height="200px" width="200px">
+            </div>
+            <div class="project-item" data-aos="fade-left">
+             
+              <img src="java2.png"  alt="Logo PWA" class="img-fluid glow-on-hover" style="margin-left: 50px;" height="200px" width="200px">
+            </div>
+          </div>
+      </div>
+      
+      
+
+    
+      <h1 class="text-center" data-aos="flip-left" id="projects" style="margin-top: 200px;">Project</h1>
+
+      <div class="container project-container mt-5" style="margin-top: 200px;">
+        <div class="project-item text-center" data-aos="fade-right">
+          <h2>Aplikasi Laundry</h2>
+          <img src="1.png" alt="Logo Laundry" class="img-fluid glow-on-hover" height="300px" width="300px">
+        </div>
+        <div class="project-item text-center" data-aos="fade-left" style="margin-left: 100px;">
+          <h2>Website PWA</h2>
+          <img src="2.png" alt="Logo PWA" class="img-fluid glow-on-hover" height="350px" width="350px">
+        </div>
+      </div>
+  
+  
+
+  <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1440 320"><path fill="1A1A1D" fill-opacity="1" d="M0,96L13.3,117.3C26.7,139,53,181,80,213.3C106.7,245,133,267,160,240C186.7,213,213,139,240,122.7C266.7,107,293,149,320,165.3C346.7,181,373,171,400,165.3C426.7,160,453,160,480,144C506.7,128,533,96,560,80C586.7,64,613,64,640,74.7C666.7,85,693,107,720,133.3C746.7,160,773,192,800,224C826.7,256,853,288,880,266.7C906.7,245,933,171,960,149.3C986.7,128,1013,160,1040,165.3C1066.7,171,1093,149,1120,122.7C1146.7,96,1173,64,1200,74.7C1226.7,85,1253,139,1280,160C1306.7,181,1333,171,1360,170.7C1386.7,171,1413,181,1427,186.7L1440,192L1440,320L1426.7,320C1413.3,320,1387,320,1360,320C1333.3,320,1307,320,1280,320C1253.3,320,1227,320,1200,320C1173.3,320,1147,320,1120,320C1093.3,320,1067,320,1040,320C1013.3,320,987,320,960,320C933.3,320,907,320,880,320C853.3,320,827,320,800,320C773.3,320,747,320,720,320C693.3,320,667,320,640,320C613.3,320,587,320,560,320C533.3,320,507,320,480,320C453.3,320,427,320,400,320C373.3,320,347,320,320,320C293.3,320,267,320,240,320C213.3,320,187,320,160,320C133.3,320,107,320,80,320C53.3,320,27,320,13,320L0,320Z"></path></svg>
+  
+</div>
+
+   
+    <script>
+         function scrollToAbout() {  
+            const aboutSection = document.getElementById('about');   
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        function scrollToProjects() {
+            const projectsSection = document.getElementById('projects');  
+            projectsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        function scrollToskill() {
+            const skillSection = document.getElementById('skill');  
+            skillSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        function scrollTohome() {
+            const homeSection = document.getElementById('home');  
+            homeSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+
+</body>
+</html>
